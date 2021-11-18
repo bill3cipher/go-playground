@@ -1,31 +1,33 @@
 package main
 
+import "fmt"
+
 func main() {
 
-	// fmt.Println("============for loop============")
-	// //for loop
-	// for i := 0; i <= 10; i++ {
-	// 	fmt.Println("i=", i)
-	// }
+	fmt.Println("============for loop============")
+	//for loop
+	for i := 0; i <= 10; i++ {
+		fmt.Println("i=", i)
+	}
 
-	// //while loop
-	// fmt.Println("============while loop============")
-	// j := 0
-	// for j <= 10 {
-	// 	fmt.Println("j=", j)
-	// 	j++
-	// }
+	//while loop
+	fmt.Println("============while loop============")
+	j := 0
+	for j <= 10 {
+		fmt.Println("j=", j)
+		j++
+	}
 
-	// //infinity loop
-	// fmt.Println("============infinity loop============")
-	// k := 0
-	// for {
-	// 	k++
-	// 	fmt.Println("k=", k)
-	// 	if k == 10 {
-	// 		break
-	// 	}
-	// }
+	//infinity loop
+	fmt.Println("============infinity loop============")
+	k := 0
+	for {
+		k++
+		fmt.Println("k=", k)
+		if k == 10 {
+			break
+		}
+	}
 
 	n := sumOfFirst(3)
 	println(n)
