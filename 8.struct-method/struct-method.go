@@ -35,6 +35,8 @@ func main() {
 	fmt.Println(book.String())
 	book.SetName("test")
 	fmt.Println(book.String())
+
+	rec.setWidth(10)
 }
 
 // This is Function
@@ -47,10 +49,16 @@ func (rec rectangle) Area() float64 {
 	return rec.w * rec.l
 }
 
+func (rec *rectangle) setWidth(w float64) {
+	rec.w = w
+}
+
 func (book Book) String() string {
 	return book.Name + " by " + book.Author
 }
 
+// ถ้าต้องการเปลี่ยนค่าที่อยู่ใน instance ต้องรับมาเป็นPointer
+// ถ้ารับเป็นแบบธรรมดาจะcopyค่าจากข้างนอกมาเปลี่ยนค่าแล้วทำลายตัวแปลทิ้งทำให้ไม่ได้ค่าที่ต้องการ
 func (book *Book) SetName(name string) {
 	book.Name = name
 }
